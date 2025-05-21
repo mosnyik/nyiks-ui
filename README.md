@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Repository: Nyiks-ui
 
-First, run the development server:
+### 🎨 Overview
+**Nyiks UI** is a web-based frontend that enables developers and non-developers to generate Clarity smart contracts visually. It mirrors the capabilities of the CLI tool but through a simple and intuitive interface.
 
+### 🔗 Built with Stacks
+- Uses the Clarity language
+- Outputs contracts that are deployable to the Stacks chain
+- Optionally integrates with nyiks-cli
+
+### 🌟 Key Features
+- Select contract type (DAO, NFT, Token, etc.)
+- Fill in inputs via form fields
+- Real-time preview of the generated `.clar` contract
+- Export contract to local file or copy to clipboard
+
+### 🧪 Tech Stack
+- Next.js + Tailwind CSS
+- Zustand for local state
+- Optional backend: nyiks-cli as a service
+
+### 🛠 Setup
 ```bash
+git clone https://github.com/zorex-tech/nyiks-ui.git
+cd nyiks-ui
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📅 Project Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Milestone 1: UI Scaffolding
+- Project setup and theme config
+- Page layout and routing
+- Initial form for contract selection and input fields
 
-## Learn More
+### Milestone 2: Code Generation
+- Map UI inputs to template variables
+- Preview generated Clarity code in real time
+- Export `.clar` files
 
-To learn more about Next.js, take a look at the following resources:
+### Milestone 3: UX Polishing
+- Add validations, error states, and tooltips
+- Mobile responsiveness
+- UI testing suite
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Milestone 4: Template Variety
+- Add support for new contract types (e.g., launchpad, vault)
+- Advanced options for contract modifiers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Milestone 5: Integration (Optional)
+- Add support to invoke `nyiks-cli` via backend API
+- Push contracts directly to GitHub or deploy sandbox
 
-## Deploy on Vercel
+### Milestone 6: Production Launch
+- Polish and deploy to Vercel
+- Write public documentation and usage guides
+- Create demo videos or onboarding walkthroughs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Related Projects
+- [nyiks-cli](https://github.com/zorex-tech/nyiks-cli) – Command-line contract generator used behind the scenes
