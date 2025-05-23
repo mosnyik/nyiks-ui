@@ -30,6 +30,59 @@ npm run dev
 
 ---
 
+## 📁 Folder Structure
+
+nyiks-ui/
+├── app/                            
+│   ├── layout.tsx                  
+│   ├── page.tsx                   
+│   ├── create/                    
+│   │   └── page.tsx                
+│   ├── templates/                 
+│   │   └── page.tsx
+│   ├── feedback/                   
+│   │   └── page.tsx
+│   └── share/                      
+│       └── page.tsx
+│
+├── components/                     
+│   ├── ConnectWalletButton.tsx
+│   ├── ContractPicker.tsx
+│   ├── ParameterForm.tsx
+│   ├── ContractPreview.tsx
+│   ├── ExportButtons.tsx
+│   ├── Tabs.tsx
+│   ├── TemplateCard.tsx
+│   └── FeedbackForm.tsx
+│
+├── lib/                            
+│   ├── templates/                  
+│   │   ├── dao.ts
+│   │   ├── ft.ts
+│   │   └── nft.ts
+│   └── generator.ts                
+│
+├── store/                          
+│   └── useContractStore.ts
+│
+├── public/                         
+│   └── logo.svg
+│
+├── styles/                         
+│   ├── globals.css
+│   └── theme.css
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml                  
+│
+├── .eslintrc.js
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+├── README.md
+└── CONTRIBUTING.md
+
 ## 📅 Project Roadmap
 
 ### Milestone 1: UI Scaffolding
