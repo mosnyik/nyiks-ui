@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { AppConfig, UserSession, showConnect } from "@stacks/connect";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import { WalletIcon, LogOutIcon, CopyIcon, CheckIcon } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/app/components/ui/tooltip";
 
 const appConfig = new AppConfig(["store_write", "publish_data"]);
 const userSession = new UserSession({ appConfig });

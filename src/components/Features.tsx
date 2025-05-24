@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/app/components/ui/card";
 import { Code, Layers, Wallet, Zap } from "lucide-react";
 
 export function Features() {

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import { GithubIcon, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { WalletConnect } from "@/app/components/ConnectWallet";

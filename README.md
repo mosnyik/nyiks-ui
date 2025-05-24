@@ -46,7 +46,12 @@ nyiks-ui/
 │       └── page.tsx
 │
 ├── components/                     
-│   ├── ConnectWalletButton.tsx
+│   ├── ConnectWallet.tsx
+│   ├── Features.tsx
+│   ├── HeroSection.tsx
+│   ├── Navbar.tsx
+│   ├── ThemeProvider.tsx
+│   ├── ThemeToggle.tsx
 │   ├── ContractPicker.tsx
 │   ├── ParameterForm.tsx
 │   ├── ContractPreview.tsx
@@ -60,7 +65,9 @@ nyiks-ui/
 │   │   ├── dao.ts
 │   │   ├── ft.ts
 │   │   └── nft.ts
-│   └── generator.ts                
+│   ├── generator.ts                
+│   ├── stacksSession.ts                
+│   └── utils.ts                
 │
 ├── store/                          
 │   └── useContractStore.ts
