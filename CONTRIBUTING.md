@@ -17,15 +17,19 @@ Thank you for your interest in contributing to **Nyiks UI**! Whether you're fixi
 
 > *NOTE:* Replace <your-username> with your actual GitHub username.
 
-3. **Clone Your Fork**
+3. **Install Dependencies with pnpm**
 ```bash
-   git clone https://github.com/<your-username>/nyiks-ui.git
-   cd nyiks-ui
+   pnpm install
 ```
 4. **Start Development Server**
 ```bash
-     npm run dev
+pnpm install
 ```
+>💡 If you don’t have `pnpm` installed globally:
+```bash
+npm install -g pnpm
+```
+
 
 ## 🌿 Branching Strategy
 - Use the main branch as the base for all your work.

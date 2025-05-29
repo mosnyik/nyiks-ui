@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { AppConfig, UserSession, showConnect } from "@stacks/connect";
-import { Button } from "@/app/components/ui/button";
 import { WalletIcon, LogOutIcon, CopyIcon, CheckIcon } from "lucide-react";
+import { Button } from "./ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/app/components/ui/tooltip";
+} from "./ui/tooltip";
 
 const appConfig = new AppConfig(["store_write", "publish_data"]);
 const userSession = new UserSession({ appConfig });
@@ -18,6 +18,7 @@ export function WalletConnect() {
   const [mounted, setMounted] = useState(false);
   const [userData, setUserData] = useState<any>(null);
   const [copied, setCopied] = useState(false);
+  
 
   useEffect(() => {
     setMounted(true);

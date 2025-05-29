@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Button } from "@/app/components/ui/button";
 import { GithubIcon, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { WalletConnect } from "@/app/components/ConnectWallet";
-import { ThemeToggle } from "@/app/components/ThemeToggle";
+import { Button } from "./ui/button";
+import { ThemeToggle } from "./ThemeToggle";
+import { WalletConnect } from "./ConnectWallet";
+// import { Button } from "@/app/components/ui/button";
+// import { WalletConnect } from "@/app/components/ConnectWallet";
+// import { ThemeToggle } from "@/app/components/ThemeToggle";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -25,15 +28,15 @@ export function Navbar() {
       active: pathname === "/contracts",
     },
     {
-      href: "/templates",
+      href: "/template",
       label: "Templates",
-      active: pathname === "/templates",
+      active: pathname === "/template",
     },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+      <div className="container flex h-14 items-center mx-6">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold text-xl">Nyiks UI</span>

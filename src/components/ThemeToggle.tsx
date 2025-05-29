@@ -1,14 +1,14 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-
-import { Button } from "@/app/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/app/components/ui/dropdown-menu";
+} from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
+
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();

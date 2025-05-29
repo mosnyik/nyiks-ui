@@ -24,10 +24,19 @@
 ```bash
 git clone https://github.com/zorex-tech/nyiks-ui.git
 cd nyiks-ui
-npm install
-npm run dev
+
+# Install dependencies with pnpm
+pnpm install
+
+# Start the development server
+pnpm dev
+
 ```
 
+>** Note**: This project uses pnpm. If you don’t have it installed, run:
+```bash
+npm install -g pnpm
+```
 ---
 
 ## 📁 Folder Structure
@@ -87,6 +96,7 @@ nyiks-ui/
 ├── tailwind.config.ts
 ├── tsconfig.json
 ├── package.json
+├── pnpm-lock.yaml
 ├── README.md
 └── CONTRIBUTING.md
 
