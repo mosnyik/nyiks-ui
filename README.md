@@ -24,11 +24,81 @@
 ```bash
 git clone https://github.com/zorex-tech/nyiks-ui.git
 cd nyiks-ui
-npm install
-npm run dev
+
+# Install dependencies with pnpm
+pnpm install
+
+# Start the development server
+pnpm dev
+
 ```
 
+>** Note**: This project uses pnpm. If you don’t have it installed, run:
+```bash
+npm install -g pnpm
+```
 ---
+
+## 📁 Folder Structure
+
+nyiks-ui/
+├── app/                            
+│   ├── layout.tsx                  
+│   ├── page.tsx                   
+│   ├── create/                    
+│   │   └── page.tsx                
+│   ├── templates/                 
+│   │   └── page.tsx
+│   ├── feedback/                   
+│   │   └── page.tsx
+│   └── share/                      
+│       └── page.tsx
+│
+├── components/                     
+│   ├── ConnectWallet.tsx
+│   ├── Features.tsx
+│   ├── HeroSection.tsx
+│   ├── Navbar.tsx
+│   ├── ThemeProvider.tsx
+│   ├── ThemeToggle.tsx
+│   ├── ContractPicker.tsx
+│   ├── ParameterForm.tsx
+│   ├── ContractPreview.tsx
+│   ├── ExportButtons.tsx
+│   ├── Tabs.tsx
+│   ├── TemplateCard.tsx
+│   └── FeedbackForm.tsx
+│
+├── lib/                            
+│   ├── templates/                  
+│   │   ├── dao.ts
+│   │   ├── ft.ts
+│   │   └── nft.ts
+│   ├── generator.ts                
+│   ├── stacksSession.ts                
+│   └── utils.ts                
+│
+├── store/                          
+│   └── useContractStore.ts
+│
+├── public/                         
+│   └── logo.svg
+│
+├── styles/                         
+│   ├── globals.css
+│   └── theme.css
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml                  
+│
+├── .eslintrc.js
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+├── pnpm-lock.yaml
+├── README.md
+└── CONTRIBUTING.md
 
 ## 📅 Project Roadmap
 
