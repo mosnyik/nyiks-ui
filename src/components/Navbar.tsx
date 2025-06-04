@@ -8,9 +8,6 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { WalletConnect } from "./ConnectWallet";
-// import { Button } from "@/app/components/ui/button";
-// import { WalletConnect } from "@/app/components/ConnectWallet";
-// import { ThemeToggle } from "@/app/components/ThemeToggle";
 
 export function Navbar() {
   const pathname = usePathname();
