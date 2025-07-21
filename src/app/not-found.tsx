@@ -30,7 +30,7 @@ export default function NotFound() {
             Page Not Found
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-md mx-auto">
-            Oops! The page you're looking for seems to have vanished into the
+            Oops! The page you&rsquo;re looking for seems to have vanished into the
             blockchain void.
           </p>
         </div>

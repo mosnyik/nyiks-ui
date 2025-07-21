@@ -1,5 +1,7 @@
 // Contract templates and project files
-export const contractTemplates = {
+export let contractTemplates: Record<string, string> = {};
+export let projectFiles: Record<string, Record<string, string>> = {};
+contractTemplates = {
   nft: `;;  SIP-009 NFT Contract Template
 ;;  Non-Fungible Token Implementation
 
@@ -218,9 +220,9 @@ export const contractTemplates = {
     (ok true)
   )
 )`,
-}
+};
 
-export const projectFiles = {
+projectFiles = {
   nft: {
     "README.md": `# NFT Contract Project
 
@@ -587,65 +589,87 @@ epoch = 2.4
   "license": "MIT"
 }`,
   },
-}
+};
 
 export const templateMetadata = [
   {
     id: "nft",
     title: "NFT Contract",
-    description: "Non-Fungible Token implementation with metadata support and marketplace integration.",
+    description:
+      "Non-Fungible Token implementation with metadata support and marketplace integration.",
     icon: "FileCode",
-    features: ["SIP-009 compliant", "Metadata support", "Minting functionality", "Transfer capabilities"],
+    features: [
+      "SIP-009 compliant",
+      "Metadata support",
+      "Minting functionality",
+      "Transfer capabilities",
+    ],
   },
   {
     id: "ft",
     title: "Fungible Token",
-    description: "Standard Fungible Token implementation with transfer and allowance functionality.",
+    description:
+      "Standard Fungible Token implementation with transfer and allowance functionality.",
     icon: "Coins",
-    features: ["SIP-010 compliant", "Transfer functionality", "Allowance mechanism", "Mint/burn capabilities"],
+    features: [
+      "SIP-010 compliant",
+      "Transfer functionality",
+      "Allowance mechanism",
+      "Mint/burn capabilities",
+    ],
   },
   {
     id: "dao",
     title: "DAO Contract",
-    description: "Decentralized Autonomous Organization with governance and voting mechanisms.",
+    description:
+      "Decentralized Autonomous Organization with governance and voting mechanisms.",
     icon: "Users",
-    features: ["Proposal creation", "Voting mechanism", "Treasury management", "Member governance"],
+    features: [
+      "Proposal creation",
+      "Voting mechanism",
+      "Treasury management",
+      "Member governance",
+    ],
   },
-]
+];
 
 // Function to create and download a project zip
-export const downloadProject = async (templateId: string, customContractCode?: string) => {
+export const downloadProject = async (
+  templateId: string,
+  customContractCode?: string
+) => {
   try {
     // Dynamic import of JSZip
-    const JSZip = (await import("jszip")).default
-    const zip = new JSZip()
+    const JSZip = (await import("jszip")).default;
+    const zip = new JSZip();
 
     // Add contract file with either custom code or template code
-    const contractFileName = `contracts/${templateId === "nft" ? "my-nft" : templateId === "ft" ? "my-token" : "dao"}.clar`
-    const contractCode = customContractCode || contractTemplates[templateId as keyof typeof contractTemplates]
-    zip.file(contractFileName, contractCode)
+    const contractFileName = `contracts/${
+      templateId === "nft" ? "my-nft" : templateId === "ft" ? "my-token" : "dao"
+    }.clar`;
+    const contractCode =
+      customContractCode ||
+      contractTemplates[templateId as keyof typeof contractTemplates];
+    zip.file(contractFileName, contractCode);
 
     // Add project files
-    const files = projectFiles[templateId as keyof typeof projectFiles]
+    const files = projectFiles[templateId as keyof typeof projectFiles];
     Object.entries(files).forEach(([filename, content]) => {
-      zip.file(filename, content)
-    })
+      zip.file(filename, content);
+    });
 
     // Generate and download zip
-    const content = await zip.generateAsync({ type: "blob" })
-    const element = document.createElement("a")
-    element.href = URL.createObjectURL(content)
-    element.download = `${templateId}-contract-project.zip`
-    document.body.appendChild(element)
-    element.click()
-    document.body.removeChild(element)
+    const content = await zip.generateAsync({ type: "blob" });
+    const element = document.createElement("a");
+    element.href = URL.createObjectURL(content);
+    element.download = `${templateId}-contract-project.zip`;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
 
-    return true
+    return true;
   } catch (error) {
-    console.error("Failed to download project:", error)
-    return false
+    console.error("Failed to download project:", error);
+    return false;
   }
-}
-
-
-
+};

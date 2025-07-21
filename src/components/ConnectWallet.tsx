@@ -13,19 +13,34 @@ import {
 
 const appConfig = new AppConfig(["store_write", "publish_data"]);
 const userSession = new UserSession({ appConfig });
+interface StxAddress {
+  mainnet: string;
+  testnet: string;
+}
+
+interface UserProfile {
+  btcAddress: string;
+  stxAddress: StxAddress;
+}
+
+interface UserData {
+  profile: UserProfile;
+}
 
 export function WalletConnect() {
   const [mounted, setMounted] = useState(false);
-  const [userData, setUserData] = useState<any>(null);
+  const [userData, setUserData] = useState<UserData|null>(null);
   const [copied, setCopied] = useState(false);
   
 
   useEffect(() => {
     setMounted(true);
     if (userSession.isUserSignedIn()) {
+      
       setUserData(userSession.loadUserData());
     }
   }, []);
+
 
   const connectWallet = () => {
     showConnect({

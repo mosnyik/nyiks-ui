@@ -14,12 +14,14 @@ export interface TemplateDefinition {
  * Add a new template to the system
  * @param template The template definition
  */
+
+
 export function addTemplate(template: TemplateDefinition): void {
   // Add to contractTemplates
-  (contractTemplates as any)[template.id] = template.contractCode;
+  contractTemplates[template.id] = template.contractCode;
 
   // Add to projectFiles
-  (projectFiles as any)[template.id] = template.projectFiles;
+  projectFiles[template.id] = template.projectFiles;
 
   // Add to templateMetadata
   templateMetadata.push({

@@ -49,8 +49,8 @@ export default function Error({
               Something went wrong!
             </CardTitle>
             <CardDescription className="text-lg text-gray-600 dark:text-gray-300">
-              We encountered an unexpected error. Don't worry, our team has been
-              notified.
+              We encountered an unexpected error. Don&rsquo;t worry, our team has
+              been notified.
             </CardDescription>
           </CardHeader>
 
