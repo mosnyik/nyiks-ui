@@ -278,7 +278,7 @@ import {
   contractTemplates,
   templateMetadata,
   downloadProject,
-} from "@/lib/templates";
+} from "@/lib/temps";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Switch } from "@/components/ui/switch";
 
