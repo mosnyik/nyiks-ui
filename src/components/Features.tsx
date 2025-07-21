@@ -46,7 +46,7 @@ export function Features() {
           <CardContent>
             <CardDescription>
               {showConnect ? (
-                  <WalletConnect />
+                <WalletConnect />
               ) : (
                 "Seamlessly connect to Stacks wallets like Hiro Wallet or Xverse."
               )}
@@ -69,7 +69,7 @@ export function Features() {
           </Card>
         </Link>
 
-        <Link href="/contract-templates" className="block">
+        <Link href="/template" className="block">
           <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
             <CardHeader className="space-y-1">
               <CardTitle className="text-lg flex items-center gap-2">
